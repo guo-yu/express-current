@@ -4,13 +4,17 @@ the current page middleware express-scaffold built-in
 
 ### Installation
 ````
-$ [sudo] npm install express-current
+$ npm install express-current
 ````
-
 
 ### Example
 ````javascript
-var express-current = require('express-current');
+var app = express();
+var current = require('express-current');
+
+app.get('/', current, function(req, res, next){
+  console.log(res.locals.current);
+});
 ````
 
 ### API
